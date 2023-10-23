@@ -13,7 +13,7 @@ local opt = vim.opt
 
 opt.wrap = true --line wrap
 opt.clipboard = "" -- Sync with system clipboard
-opt.timeoutlen = 1000 -- Time out on key codes
+opt.timeoutlen = 600 -- Time out on key codes
 
 -- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
 --   -- Disable virtual_text
