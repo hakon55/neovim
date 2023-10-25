@@ -32,6 +32,8 @@ v.set("n", "<leader>K", "")
 v.set("n", "<leader>fT", "")
 v.set("n", "<leader>`", "")
 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 v.set("n", "<c-w>", function()
   require("mini.bufremove").delete(0, false)
 end, { desc = "Delete Buffer" })
