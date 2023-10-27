@@ -1,1 +1,99 @@
-.ideavimrc
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+let mapleader=" "
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+set surround
+set commentary
+set easymotion
+set highlightedyank
+set which-key
+set timeoutlen=10000
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+map <leader>f <Action>(ReformatCode)
+
+"" Map to Run
+map <leader>r <Action>(Run)
+
+"" Map to Run
+map <leader>R <Action>(RerunFailedTests)
+
+"" Map to toggle SoftWrap
+map <leader>s <Action>(EditorToggleUseSoftWraps)
+
+"" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+"" Map to optimize imports
+map <leader>o <Action>(OptimizeImports)
+
+"" Map to import Maven
+map <leader>i <Action>(Maven.Reimport)
+
+"" Map to open Terminal
+map <leader>t <Action>(ActivateTerminalToolWindow)
+
+"" Map to EditorLayout 
+map <leader>z <Action>(RestoreDefaultLayout)
+
+"" Map to Viewmode
+map <leader>v <Action>(ViewMenu)
+
+"" Map to close all tabs
+map <leader>x <Action>(CloseAllEditorsButActive)
+
+map H <Action>(PreviousTab)
+map L <Action>(NextTab)
+
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+
+""map <Leader> <Plug>(easymotion-prefix)
+map s <Plug>(easymotion-s)
+vmap sa S
+
+map sa ys
+map sd ds
+map sr rs
+
+map <cr> <Plug>(easymotion-s)
+
+map <Leader>r <Action>(RunMenu)
+
+
+map <Leader>m <Action>(Maven.Reimport)
+
+
+""nnoremap p \"0p
+""nnoremap P \"0P
+
+"" Map to toogle Bookmark
+nnoremap ma :action ToggleBookmark<CR>
+
+nnoremap <leader>p \"0p
+nnoremap <leader>P \"0P
