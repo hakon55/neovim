@@ -20,7 +20,7 @@ v.set({ "n" }, "<c-u>", "<c-u>zz", { desc = "Center window after scroll up" })
 v.set({ "n" }, "<c-d>", "<c-d>zz", { desc = "Center window after scroll down" })
 
 v.set("n", "<leader>fd", "<cmd>Dashboard<cr>", { desc = "Dashboard" })
-v.set("n", "<leader>fc", ":e $MYVIMRC <cr>", { desc = "Neovim config", noremap = true })
+-- v.set("n", "<leader>fc", ":e $MYVIMRC <cr>", { desc = "Neovim config", noremap = true })
 v.set("n", "<leader>S", "<cmd>wa<cr><esc>", { desc = "Save all", noremap = true })
 v.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Terminal", noremap = true })
 v.set("n", "<leader>ft", "<cmd>ToggleTerm direction=vertical size=80 <cr>", { desc = "Terminal (sidebar)" })
@@ -31,8 +31,6 @@ v.set("n", "<leader>|", "")
 v.set("n", "<leader>K", "")
 v.set("n", "<leader>fT", "")
 v.set("n", "<leader>`", "")
-
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 v.set("n", "<c-w>", function()
   require("mini.bufremove").delete(0, false)
