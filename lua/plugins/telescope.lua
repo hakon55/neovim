@@ -2,9 +2,11 @@ local Util = require("lazyvim.util")
 return {
   "nvim-telescope/telescope.nvim",
   keys = {
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+    -- { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+
+    { "<leader>/", Util.telescope("live_grep"), desc = "Grep" },
+    { "<leader><space>", Util.telescope("files"), desc = "Find Files" },
     { "<leader>bB", "<cmd>Telescope buffers<cr>", desc = "Switch Buffers" },
-    { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
     { "<leader>ff", Util.telescope("files"), desc = "Find Files" },
     { "<leader>fF", false },
     { "<leader>fR", false },

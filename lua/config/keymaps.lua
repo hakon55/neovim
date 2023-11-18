@@ -2,6 +2,8 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps her
 
+local Util = require("lazyvim.util")
+
 local v = vim.keymap
 
 -- vim.keymap.set({ "n", "v" }, "<c-v>", '"+p', { noremap = true, silent = true })
@@ -22,14 +24,27 @@ v.set({ "n" }, "<c-d>", "<c-d>zz", { desc = "Center window after scroll down" })
 v.set("n", "<leader>fd", "<cmd>Dashboard<cr>", { desc = "Dashboard" })
 -- v.set("n", "<leader>fc", ":e $MYVIMRC <cr>", { desc = "Neovim config", noremap = true })
 v.set("n", "<leader>S", "<cmd>wa<cr><esc>", { desc = "Save all", noremap = true })
-v.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Terminal", noremap = true })
-v.set("n", "<leader>ft", "<cmd>ToggleTerm direction=vertical size=80 <cr>", { desc = "Terminal (sidebar)" })
-v.set("n", "<c-/>,", "<cmd>ToggleTerm<cr>", { desc = "ToggleTerm Terminal", noremap = true })
+
+local lazyterm = function()
+  Util.terminal(nil, { cwd = Util.root() })
+end
+v.set("n", "<leader>ft", lazyterm, { desc = "Terminal (primary)" })
+v.set("n", "<leader>fT", function()
+  Util.terminal()
+end, { desc = "Terminal (secondary)" })
+
+-- v.set("n", "<leader>t", "<cmd>ToggleTerm size=40<cr>", { desc = "Terminal", noremap = true })
+-- v.set("n", "<leader>ft", "<cmd>ToggleTerm<cr>", { desc = "Terminal (root)", noremap = true })
+-- v.set("n", "<leader>fT", "<cmd>ToggleTerm dir=~ name=home <cr>", { desc = "Terminal (home)" })
+-- v.set("n", "<leader>ft", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (horizontal)", noremap = true })
+-- v.set("n", "<leader>fT", "<cmd>ToggleTerm direction=vertical size=80<cr>", { desc = "Terminal (vertical)" })
+-- v.set("n", "<c-/>,", "<cmd>ToggleTerm<cr>", { desc = "ToggleTerm Terminal", noremap = true })
 
 v.set("n", "<leader>-", "")
 v.set("n", "<leader>|", "")
 v.set("n", "<leader>K", "")
-v.set("n", "<leader>fT", "")
+-- v.set("n", "<leader>fT", "")
+v.set("n", "<leader>dr", "")
 v.set("n", "<leader>`", "")
 
 v.set("n", "<c-w>", function()
