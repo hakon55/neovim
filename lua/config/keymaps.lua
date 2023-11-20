@@ -21,6 +21,8 @@ v.set({ "n", "v", "i", "c" }, "<c-z>", "<c-r>", { noremap = true, silent = true 
 v.set({ "n" }, "<c-u>", "<c-u>zz", { desc = "Center window after scroll up" })
 v.set({ "n" }, "<c-d>", "<c-d>zz", { desc = "Center window after scroll down" })
 
+v.set("n", "md", "<cmd>delmarks A-Z0-9<cr>", { desc = "Delete all marks" })
+
 v.set("n", "<leader>fd", "<cmd>Dashboard<cr>", { desc = "Dashboard" })
 -- v.set("n", "<leader>fc", ":e $MYVIMRC <cr>", { desc = "Neovim config", noremap = true })
 v.set("n", "<leader>S", "<cmd>wa<cr><esc>", { desc = "Save all", noremap = true })
