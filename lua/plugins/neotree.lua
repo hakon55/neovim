@@ -10,30 +10,33 @@ return {
       use_libuv_file_watcher = true,
       window = {
         mappings = {
-          ["h"] = "open_split",
-          ["S"] = "",
-          ["v"] = "open_vsplit",
-          ["s"] = "",
+          -- ["h"] = "open_split",
+          -- ["S"] = "",
+          -- ["v"] = "open_vsplit",
+          -- ["s"] = "",
+          ["/"] = "",
         },
       },
     },
     git_status = {
       window = {
         mappings = {
-          ["h"] = "open_split",
-          ["S"] = "",
-          ["v"] = "open_vsplit",
-          ["s"] = "",
+          ["/"] = "",
+          -- ["h"] = "open_split",
+          -- ["S"] = "",
+          -- ["v"] = "open_vsplit",
+          -- ["s"] = "",
         },
       },
     },
     buffers = {
       window = {
         mappings = {
-          ["h"] = "open_split",
-          ["S"] = "",
-          ["v"] = "open_vsplit",
-          ["s"] = "",
+          ["/"] = "",
+          -- ["h"] = "open_split",
+          -- ["S"] = "",
+          -- ["v"] = "open_vsplit",
+          -- ["s"] = "",
         },
       },
     },
