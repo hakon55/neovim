@@ -27,13 +27,17 @@ v.set("n", "<leader>fd", "<cmd>Dashboard<cr>", { desc = "Dashboard" })
 -- v.set("n", "<leader>fc", ":e $MYVIMRC <cr>", { desc = "Neovim config", noremap = true })
 v.set("n", "<leader>S", "<cmd>wa<cr><esc>", { desc = "Save all", noremap = true })
 
+-- Disable lazygit on root cwd
+v.set("n", "<leader>gG", "")
+
 local lazyterm = function()
   Util.terminal(nil, { cwd = Util.root() })
 end
-v.set("n", "<leader>ft", lazyterm, { desc = "Terminal (primary)" })
-v.set("n", "<leader>fT", function()
-  Util.terminal()
-end, { desc = "Terminal (secondary)" })
+v.set("n", "<leader>ft", lazyterm, { desc = "Terminal (secondary)" })
+v.set("n", "<leader>t", lazyterm, { desc = "Terminal (primary)" })
+-- v.set("n", "<leader>fT", function()
+--   Util.terminal()
+-- end, { desc = "Terminal (secondary)" })
 
 -- v.set("n", "<leader>t", "<cmd>ToggleTerm size=40<cr>", { desc = "Terminal", noremap = true })
 -- v.set("n", "<leader>ft", "<cmd>ToggleTerm<cr>", { desc = "Terminal (root)", noremap = true })
