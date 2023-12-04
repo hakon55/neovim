@@ -20,7 +20,6 @@ map Q gq
 " --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
 set surround
 set commentary
-set easymotion
 set highlightedyank
 set which-key
 set timeoutlen=10000
@@ -62,6 +61,9 @@ map <leader>v <Action>(ViewMenu)
 "" Map to close all tabs
 map <leader>x <Action>(CloseAllEditorsButActive)
 
+"" Close all editors
+map <leader>X <Action>(CloseAllEditors)
+
 map H <Action>(PreviousTab)
 map L <Action>(NextTab)
 
@@ -73,27 +75,47 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 
-""map <Leader> <Plug>(easymotion-prefix)
-map s <Plug>(easymotion-s)
+nmap <M-j> <Action>(MoveLineDown)
+nmap <M-k> <Action>(MoveLineUp)
+
 vmap sa S
 
-map sa ys
-map sd ds
-map sr rs
+nmap sa ys
+nmap sd ds
+nmap sr cs
 
-map <cr> <Plug>(easymotion-s)
+""TODO fikse hotkey for surround, og gjøre om flash og surround i nvim
 
+""TODO: fix dette tullet
+""map <cr> <Plug>(easymotion-s)
+""map <Leader> <Plug>(easymotion-prefix)
+
+""TODO: Legge til move line opp/down med option og J/K
 map <Leader>r <Action>(RunMenu)
 
+map <Leader>s <Action>(SurroundWith)
 
 map <Leader>m <Action>(Maven.Reimport)
+
+map <Leader>wd <Action>(Unsplit)
+map <Leader>wv <Action>(SplitHorizontally)
+map <Leader>wh <Action>(SplitVertically)
+map <Leader>ww <Action>(EditSourceInNewWindow)
+map <Leader><Leader> <Action>(Switcher)
+map <Leader>e <Action>(RecentFiles)
+map <Leader>g <Action>(Git.Commit.Stage)
+
+nmap S <Action>(AceAction)
+
+"" TODO!!! åpne i nytt window, split right, left og unsplit
 
 
 ""nnoremap p \"0p
 ""nnoremap P \"0P
 
 "" Map to toogle Bookmark
-nnoremap ma :action ToggleBookmark<CR>
+nnoremap mb :action ToggleBookmark<CR>
 
 nnoremap <leader>p \"0p
 nnoremap <leader>P \"0P
+
