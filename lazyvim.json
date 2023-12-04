@@ -1,6 +1,7 @@
 {
   "extras": [
     "lazyvim.plugins.extras.coding.codeium",
+    "lazyvim.plugins.extras.editor.mini-files",
     "lazyvim.plugins.extras.editor.symbols-outline",
     "lazyvim.plugins.extras.formatting.prettier",
     "lazyvim.plugins.extras.lang.markdown",
@@ -8,7 +9,6 @@
     "lazyvim.plugins.extras.lang.tailwind",
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.ui.edgy",
     "lazyvim.plugins.extras.util.project",
     "lazyvim.plugins.extras.vscode"
   ],

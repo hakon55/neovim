@@ -21,30 +21,30 @@ v.set({ "n", "v", "i", "c" }, "<c-z>", "<c-r>", { noremap = true, silent = true 
 v.set({ "n" }, "<c-u>", "<c-u>zz", { desc = "Center window after scroll up" })
 v.set({ "n" }, "<c-d>", "<c-d>zz", { desc = "Center window after scroll down" })
 
-v.set("n", "<leader>fm", "<cmd>delmarks a-zA-Z3-9<cr>", { desc = "Delete all marks" })
+v.set("n", "<leader>cM", "<cmd>delmarks a-zA-Z3-9<cr>", { desc = "Delete all marks" })
 
 v.set("n", "<leader>fd", "<cmd>Dashboard<cr>", { desc = "Dashboard" })
 -- v.set("n", "<leader>fc", ":e $MYVIMRC <cr>", { desc = "Neovim config", noremap = true })
-v.set("n", "<leader>S", "<cmd>wa<cr><esc>", { desc = "Save all", noremap = true })
+v.set("n", "<leader>S", "<cmd>wa<cr><esc>", { desc = "Save All", noremap = true })
 
 -- Disable lazygit on root cwd
 v.set("n", "<leader>gG", "")
 
-local lazyterm = function()
-  Util.terminal(nil, { cwd = Util.root() })
-end
-v.set("n", "<leader>ft", lazyterm, { desc = "Terminal (secondary)" })
-v.set("n", "<leader>t", lazyterm, { desc = "Terminal (primary)" })
+-- local lazyterm = function() Util.terminal(nil, { cwd = Util.root() })
+-- end
+-- v.set("n", "<leader>ft", lazyterm, { desc = "Terminal (secondary)" })
+-- v.set("n", "<leader>t", lazyterm, { desc = "Terminal (primary)" })
 -- v.set("n", "<leader>fT", function()
 --   Util.terminal()
 -- end, { desc = "Terminal (secondary)" })
 
--- v.set("n", "<leader>t", "<cmd>ToggleTerm size=40<cr>", { desc = "Terminal", noremap = true })
+v.set("n", "<leader>t", "<cmd>ToggleTerm<cr>", { desc = "Terminal", noremap = true })
 -- v.set("n", "<leader>ft", "<cmd>ToggleTerm<cr>", { desc = "Terminal (root)", noremap = true })
 -- v.set("n", "<leader>fT", "<cmd>ToggleTerm dir=~ name=home <cr>", { desc = "Terminal (home)" })
--- v.set("n", "<leader>ft", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (horizontal)", noremap = true })
--- v.set("n", "<leader>fT", "<cmd>ToggleTerm direction=vertical size=80<cr>", { desc = "Terminal (vertical)" })
--- v.set("n", "<c-/>,", "<cmd>ToggleTerm<cr>", { desc = "ToggleTerm Terminal", noremap = true })
+v.set("n", "<leader>ft", "<cmd>ToggleTerm direction=horizontal<cr>", { desc = "Terminal (horizontal)", noremap = true })
+v.set("n", "<leader>fT", "<cmd>ToggleTerm direction=vertical size=80<cr>", { desc = "Terminal (vertical)" })
+v.del("n", "<c-/>")
+v.set("n", "<c-/>", "<cmd>ToggleTerm<cr>", { desc = "ToggleTerm Terminal", noremap = true })
 
 v.set("n", "<leader>-", "")
 v.set("n", "<leader>|", "")
