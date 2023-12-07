@@ -23,6 +23,7 @@ set commentary
 set highlightedyank
 set which-key
 set timeoutlen=10000
+set ideajoin
 
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" Map \r to the Reformat Code action
@@ -41,7 +42,7 @@ map <leader>s <Action>(EditorToggleUseSoftWraps)
 map <leader>d <Action>(Debug)
 
 "" Map \b to toggle the breakpoint on the current line
-map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>B <Action>(ToggleLineBreakpoint)
 
 "" Map to optimize imports
 map <leader>o <Action>(OptimizeImports)
@@ -99,9 +100,13 @@ map <Leader>s <Action>(SurroundWith)
 map <Leader>m <Action>(Maven.Reimport)
 
 map <Leader>wd <Action>(Unsplit)
+map <Leader>wD <Action>(UnsplitAll)
 map <Leader>wv <Action>(SplitHorizontally)
+map <Leader>w- <Action>(SplitHorizontally)
 map <Leader>wh <Action>(SplitVertically)
+map <Leader>w\| <Action>(SplitVertically)
 map <Leader>ww <Action>(EditSourceInNewWindow)
+
 map <Leader><Leader> <Action>(Switcher)<Action>
 map <Leader>e <Action>(RecentFiles)
 map <Leader>g <Action>(Git.Commit.Stage)
