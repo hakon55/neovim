@@ -59,10 +59,10 @@ map <leader>z <Action>(RestoreDefaultLayout)
 map <leader>v <Action>(ViewMenu)
 
 "" Map to close all tabs
-map <leader>x <Action>(CloseAllEditorsButActive)
+"" map <leader>x <Action>(CloseAllEditorsButActive)
 
 "" Close all editors
-map <leader>X <Action>(CloseAllEditors)
+"" map <leader>X <Action>(CloseAllEditors)
 
 map H <Action>(PreviousTab)
 map L <Action>(NextTab)
@@ -93,6 +93,7 @@ nmap sr cs
 ""TODO: Legge til move line opp/down med option og J/K
 map <Leader>r <Action>(RunMenu)
 
+map <Leader>g <Action>(Git.Commit.Stage)
 map <Leader>s <Action>(SurroundWith)
 
 map <Leader>m <Action>(Maven.Reimport)
@@ -101,11 +102,21 @@ map <Leader>wd <Action>(Unsplit)
 map <Leader>wv <Action>(SplitHorizontally)
 map <Leader>wh <Action>(SplitVertically)
 map <Leader>ww <Action>(EditSourceInNewWindow)
-map <Leader><Leader> <Action>(Switcher)
+map <Leader><Leader> <Action>(Switcher)<Action>
 map <Leader>e <Action>(RecentFiles)
 map <Leader>g <Action>(Git.Commit.Stage)
+map <Leader>s <Action>(SelectIn)
+map <Leader>k <Action>(ProjectViewPopupMenu)
 
-nmap S <Action>(AceAction)
+
+map <Leader>bd <Action>(CloseEditor)
+map <Leader>bo <Action>(CloseAllEditorsButActive)
+map <Leader>bp <Action>(PinActiveTab)
+map <Leader>bP <Action>(CloseAllUnpinnedEditors)
+map <Leader>br <Action>(CloseAllToTheRight)
+map <Leader>bl <Action>(CloseAllToTheLeft)
+
+"" nmap S <Action>(AceAction)
 
 "" TODO!!! åpne i nytt window, split right, left og unsplit
 
@@ -118,4 +129,3 @@ nnoremap mb :action ToggleBookmark<CR>
 
 nnoremap <leader>p \"0p
 nnoremap <leader>P \"0P
-
