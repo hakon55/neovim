@@ -107,7 +107,7 @@ map <Leader>wh <Action>(SplitVertically)
 map <Leader>w\| <Action>(SplitVertically)
 map <Leader>ww <Action>(EditSourceInNewWindow)
 
-map <Leader><Leader> <Action>(Switcher)<Action>
+map <Leader><Leader> <Action>(Switcher)
 map <Leader>e <Action>(RecentFiles)
 map <Leader>g <Action>(Git.Commit.Stage)
 map <Leader>s <Action>(SelectIn)
@@ -134,3 +134,4 @@ nnoremap mb :action ToggleBookmark<CR>
 
 nnoremap <leader>p \"0p
 nnoremap <leader>P \"0P
+
